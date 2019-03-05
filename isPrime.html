@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>isPrime</title>
+</head>
+<body>
+<script>
+    function isPrime(a) {
+        let checkprime=true
+        if(a===0||a===1||a<0){checkprime=false}else{
+            
+            for (let i=2;i<=a/2;i++){
+
+                if (a%i===0){
+                    checkprime=false
+                    break;
+                }
+            }
+            
+        }
+        if(checkprime){return a+" Là số nguyên tố"}else {return a+ " Không phải là số nguyên tố"}
+    }
+    let b=parseInt(prompt());
+    document.write(isPrime(b))
+</script>
+</body>
+</html>
