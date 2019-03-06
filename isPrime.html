@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>isPrime</title>
 </head>
-<body>
+<body style="display-inside: ruby">
 <script>
     function isPrime(a) {
         let checkprime=true
@@ -19,10 +19,14 @@
             }
             
         }
-        if(checkprime){return a+" Là số nguyên tố"}else {return a+ " Không phải là số nguyên tố"}
+        return checkprime;
     }
-    let b=parseInt(prompt());
-    document.write(isPrime(b))
+    let N=parseInt(prompt("Nhập số nguyên N>5"))
+    let show=[]
+    for (let i=0;i<N;i++) {
+        if (isPrime(i)){show[show.length]=i}
+    }
+    document.write("Các số nguyên tố nhỏ hơn "+N+" là: "+ show.join())
 </script>
 </body>
 </html>
